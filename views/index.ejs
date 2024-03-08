@@ -1,0 +1,25 @@
+<div class="author">
+    <h1 class="author__heading">Welcome to 'Blog'</h1>
+    <p class="author__body">This is the basic blog.</p>
+</div>
+<img src="/img/anh.jpg" alt="my picture" class="hero-image" width="981" height="528" />
+
+<section class="article">
+    <h2 class="article__heading">Latest Posts</h2>
+    <ul class="article-ul">
+        <!-- get data from main.js -->
+        <% data.forEach(post => { %>
+        <li>
+            <!-- move a another view -->
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+</section>
