@@ -1,0 +1,18 @@
+<div class="search">
+    <h1 class="search__heading">Search Results</h1>
+</div>
+
+<section class="article">
+    <ul class="article-ul">
+        <!-- get data from main.js -->
+        <% data.forEach(post => { %>
+        <li>
+            <!-- move a another view -->
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+</section>

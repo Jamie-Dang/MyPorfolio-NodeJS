@@ -29,7 +29,7 @@ h1 {
 h2 {
     font-size: var(--font-size-lg);
 }
-h2 {
+h3 {
     font-size: var(--font-size-md);
 }
 
@@ -291,5 +291,6 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 15px;
+    padding: 5px;
+    color: white;
 }
