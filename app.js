@@ -20,7 +20,10 @@ app.use(expressLayout);
 app.set('layout', './layouts/main'); // Cấu hình layout mặc định, cho nên nó chỉ render được layouts/main!
 app.set('view engine', 'ejs');
 
+// 1 route cho người dùng
 app.use('/', require('./server/routes/main'));
+// 1 route cho admin
+app.use('/', require('./server/routes/admin'));
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
