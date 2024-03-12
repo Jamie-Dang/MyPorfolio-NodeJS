@@ -115,7 +115,7 @@ img {
 }
 
 .header__logo:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .header__nav {

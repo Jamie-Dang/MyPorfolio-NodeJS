@@ -1,9 +1,10 @@
 <header class="header">
-    <a href="/" class="header__logo">NodeJs</a>
+    <a href="/" class="header__logo">Mong Tuyen</a>
     <nav class="header__nav">
         <ul>
+            <li><a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">About me</a></li>
             <li><a href="/" class="<%= isActiveRoute('/', currentRoute) %>">Home</a></li>
-            <li><a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">About</a></li>
+            <li><a href="/" class="<%= isActiveRoute('/experience', currentRoute) %>">Experience</a></li>
             <li><a href="/" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a></li>
         </ul>
     </nav>
