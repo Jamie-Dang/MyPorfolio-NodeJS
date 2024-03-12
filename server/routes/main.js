@@ -52,6 +52,7 @@ router.get('/post/:id', async (req, res) => {
         const locals = {
             title: data.title,
             description: 'Simple Blog created with NodeJs, Express & MongoDb.',
+            currentRoute: `/post/${slug}`,
         };
         // Để render ra giao diện + Các biến sử dụng
         res.render('post', {
@@ -91,6 +92,7 @@ router.post('/search', async (req, res) => {
         res.render('search', {
             locals,
             data,
+            currentRoute: '/',
         });
     } catch (error) {
         console.log(error);
@@ -98,7 +100,7 @@ router.post('/search', async (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', { currentRoute: '/about' });
 });
 
 module.exports = router;
